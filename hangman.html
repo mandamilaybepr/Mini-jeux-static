@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu du Pendu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hangman.css">
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+    <div>
+        <h1 >Jeu du Pendu</h1>
+        <div id="word"></div> 
+        <div id="hangman">
+            <img id="hangmanImage" src="pic/hangman0.png" alt="Pendu">
+        </div>
+        
+        <div id="letterInput">
+            <label for="letter">Proposez une lettre : </label>
+            <input type="text" id="letter" maxlength="1">
+            <button id="submitGuess">Proposer</button>
+        </div>
+        <div id="guessedLetters">
+            <h3>Lettres proposées :</h3>
+            <div id="guessed"></div>
+        </div>
+
+        <div id="gameStatus">
+            <p id="message"></p>
+        </div>
+    </div>
+    <div class="grid">
+        <div id="hangmanGrid"></div>
+    </div>
+    
+    <a href="#" id="toggleButton">Afficher les Règles</a>
+    <div id="rules">
+        <h1>Règles du Jeu du Pendu</h1>
+        <p>Le but du jeu est de deviner un mot en proposant des lettres, tout en évitant que le bonhomme du pendu soit complètement dessiné.</p>
+        <h2>Comment jouer :</h2>
+        <ol>
+            <li>Un mot secret est choisi, et vous devez deviner ce mot en proposant une lettre à la fois.</li>
+            <li>Chaque bonne lettre trouvée est révélée dans le mot.</li>
+            <li>Si vous proposez une mauvaise lettre, une partie du bonhomme du pendu est dessinée.</li>
+            <li>Vous perdez si le bonhomme est complet avant d'avoir deviné tout le mot.</li>
+            <li>Vous gagnez si vous devinez toutes les lettres du mot avant que le bonhomme ne soit complètement dessiné.</li>
+        </ol>
+        <p>Bonne chance et amusez-vous bien !</p>
+    </div>
+    
+   
+    <script src="js/script.js"></script>
+    <script src="js/hangman.js"></script>
+</body>
+</html>

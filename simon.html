@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de Simon</title>
+    <style>
+        .simon {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            justify-content: space-between;
+
+        }
+
+        .btn_container {
+            display: grid;
+            grid-template-columns: repeat(2, 150px);
+            grid-template-rows: repeat(2, 150px);
+            position: relative; 
+            padding: 2%;
+        }
+
+        .color-button {
+            width: 150px;
+            height: 150px;
+            cursor: pointer;
+        }
+
+        .green {
+            background-color: green;
+            border-top-left-radius: 100%;
+        }
+
+        .red {
+            background-color: red;
+            border-top-right-radius: 100%;
+        }
+
+        .yellow {
+            background-color: yellow;
+            border-bottom-left-radius: 100%;
+        }
+
+        .blue {
+            background-color: blue;
+            border-bottom-right-radius: 100%;
+        }
+
+        .white {
+            background-color: rgb(172, 172, 172);
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            scale: 1.2;
+            border-radius: 50%;
+            top: 58%;
+            left: 51.3%;
+            transform: translate(-50%, -50%);
+            z-index: 1; 
+        }
+
+        #message {
+            font-size: 20px;
+            font-weight: bold;
+        }
+       #guide >*{
+        width: 300px; 
+        word-wrap: break-word; 
+        white-space: normal; 
+        padding: 2%;
+        }
+        #guide {
+           display: flex;
+           flex-direction: row;
+           font-size:xx-small;
+          }
+        h2{
+        font-size:medium;
+    }
+    #startButton{
+      padding-left: 2%;
+      padding-right: 2%;
+    }
+    </style>
+</head>
+<body>
+   
+    <div class="simon">
+        <h1>Jeu de Simon</h1>
+        <div class="btn_container">
+            <div id="green" class="color-button green"></div>
+            <div id="red" class="color-button red"></div>
+            <div id="yellow" class="color-button yellow"></div>
+            <div id="blue" class="color-button blue"></div>
+        </div>
+        <div class="white"></div>
+        <button id="startButton"><h2>Démarrer le jeu</h2></button>
+    </div>
+    <div id="message"></div>
+  
+    <div id="guide">
+        <div>
+        <h2><strong>But du jeu :</strong></h2><br><p>Simon va jouer une séquence de couleurs et de sons, et votre tâche est de répéter cette séquence dans le même ordre. À chaque tour, la séquence devient de plus en plus longue, alors soyez attentif !</p>
+    </div>
+    <div>
+        <h2>Règles du jeu :</h2>
+        <ul>
+          <li><strong>Regardez la séquence :</strong> Simon vous montrera une séquence de couleurs et jouera des sons correspondants.</li>
+          <li><strong>Répondez à Simon :</strong> Cliquez sur les couleurs dans le même ordre qu'elles ont été montrées. Vous devez répéter la séquence exactement comme elle a été jouée.</li>
+          <li><strong>Augmentation de la difficulté :</strong> À chaque bonne réponse, la séquence s'allongera d'une couleur. Plus vous avancez, plus la séquence devient difficile à mémoriser.</li>
+          <li><strong>Perte du jeu :</strong> Si vous vous trompez en cliquant sur une couleur incorrecte ou si vous ne suivez pas l'ordre correctement, vous perdez la partie.</li>
+          <li><strong>Vitesse :</strong> Le jeu s'accélère à mesure que vous progressez. Restez concentré et essayez d'aller le plus loin possible !</li>
+        </ul>
+    </div>
+    <div>
+        <h2>Contrôles :</h2>
+        <p> - Cliquez sur les couleurs affichées pour répéter la séquence.<br>
+            - Soyez rapide et précis ! Si vous cliquez au mauvais moment, vous perdrez.</p>
+        </div> 
+        <div>
+        <h2>Conseils pour réussir :</h2>
+        <ul>
+          <li><strong>Soyez concentré :</strong> Plus la séquence devient longue, plus il est facile de faire une erreur. Essayez de vous souvenir de la séquence à chaque étape.</li>
+          <li><strong>Jouez souvent :</strong> La pratique rend meilleur ! Plus vous jouez, plus vous serez capable de mémoriser les séquences longues.</li>
+        </ul>
+      </div>
+    </div>
+    <script src="js/simon.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'Accueil</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="jquery.min.js"></script>
+    <script type='text/javascript' src='js/jquery.particleground.js'></script>
+ 
+</head>
+<body>
+    <div class="background">
+        <div id="particles">
+            <div id="intro">
+            </div>
+          </div>
+            
+    </div>
+    <div class="content">
+        <h1>Bienvenue sur le site des jeux !</h1>  
+    </div>
+
+    <div class="container">
+        <h2 style=" color: antiquewhite;align-self:center;">Choisissez un jeu pour commencer.</h2>
+        <span class="square-grp">
+            <div class="square" id="square1" data-game="memory"></div>
+            <div class="square" id="square2" data-game="hangman"></div>
+            <div class="square" id="square3" data-game="simon"></div>
+        </span>
+        <span class="square-grp">
+            <div class="square" id="square4" data-game="game_2048"></div>
+            <div class="square" id="square5" data-game="snake"></div>
+            <div class="square" id="square6" data-game="tetris"></div>
+        </span>
+    </div>
+
+    <div id="overlay" class="overlay">
+        <div class="overlay-content">
+            <div class="close-btn" id="closeOverlay">X</div>
+            <div id="gameContainer"></div> <!-- Le jeu sera chargé ici -->
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/memory.js"></script> <!-- Charger la logique du jeu de mémoire -->
+</body>
+</html>

@@ -1,0 +1,114 @@
+#gameContainer {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+
+  width: fit-content;
+  justify-self: center;
+  align-self: center;
+  margin-left:  -10%;
+}
+.grid {
+  margin-left: 10%;
+}
+#word {
+  margin: 30px;
+}
+#hangman img {
+  width: 200px;
+  height: auto;
+  margin: 10px;
+}
+#hangmanGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 0fr); /* Crée une grille avec 3 colonnes */
+  grid-gap: 0px;
+  margin-top: 0px;
+}
+#hangmanGrid img {
+  width: 70px;
+  height: auto;
+}
+
+input[type="text"] {
+  padding: 5px;
+  font-size: 18px;
+  width: 50px;
+  text-align: center;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#guessedLetters {
+  margin-top: 20px;
+}
+
+#guessedLetters div {
+  font-size: 18px;
+}
+#rules {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  right: 6%;
+  top: 11%;
+  max-width: 300px;
+  display: none;
+}
+
+#rules h1 {
+  font-size: 2em;
+  color: #333;
+  text-align: center;
+}
+
+#rules p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #555;
+  font-size: small;
+}
+
+#rules ol {
+  font-size: 1.1em;
+  color: #333;
+  font-size: small;
+}
+
+#rules ol li {
+  margin-bottom: 10px;
+  font-size: small;
+}
+#toggleButton {
+  display: block;
+  width: 200px;
+  height: 40px ;
+  padding: 10px;
+  margin: 20px auto;
+  text-align: center;
+  background-color: #2d2f2d;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  position: absolute;
+  right: 10%;
+}
+
+#toggleButton:hover {
+  background-color: #45a049;
+}

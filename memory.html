@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de Mémoire</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="jquery.min.js"></script>
+    <style>
+        #rules{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2%;
+        }
+    </style>
+</head>
+<body>
+    <div class="choice">
+        <label>
+            <input type="radio" name="difficulty" value="easy">
+            <span class="radio-label">Facile</span>
+        </label>
+        <label>
+            <input type="radio" name="difficulty" value="medium" checked>
+            <span class="radio-label">Moyen</span>
+        </label>
+        <label>
+            <input type="radio" name="difficulty" value="hard">
+            <span class="radio-label">Difficile</span>
+        </label>
+   
+    
+    
+        <button id="startGame">Démarrer le jeu</button>
+
+    </div>
+    
+  
+    <div id="memoryBoard"></div>
+   
+    <div id="rules">
+        <h2>Règles du Jeu de Mémoire</h2>
+        <ol>
+            <li>Le jeu consiste à retourner des cartes, deux à la fois, pour trouver des paires identiques.</li>
+            <li>Chaque carte est retournée et cachée après un court délai si elle ne forme pas une paire avec l'autre carte retournée.</li>
+            <li>L'objectif est de retrouver toutes les paires en un minimum de coups.</li>
+            <li>Le jeu se termine lorsque toutes les paires sont trouvées.</li>
+            <li>Vous pouvez choisir de jouer avec un nombre différent de cartes selon votre niveau de difficulté.</li>
+        </ol>
+    </div>
+    <script src="js/memory.js"></script> 
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu Snake avec Mega Pommes</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 10px;
+        }
+
+        canvas {
+            background-color: #000;
+            border: 1px solid #fff;
+        }
+
+        #score {
+            color: rgb(5, 5, 5);
+            font-size: 70px;
+            font-style: bold;
+            position: absolute;
+            top: 60px;
+            right:  100px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <div id="score">Score: 0</div>
+
+    <script src="js/snake.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
